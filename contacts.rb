@@ -19,7 +19,18 @@ end
 
 def remove_strawberry(contacts)
   # your code here!
+  contacts.each{
+    |person|
+    person.each{
+      |item|
+      if item==:favorite_ice_cream_flavors
+        item.delete("strawberry")
+      end
+    }
+
+  }
 end
 
 # print the output to the terminal for inspection
-pp remove_strawberry(contacts)
+noo= remove_strawberry(contacts)
+pp noo
